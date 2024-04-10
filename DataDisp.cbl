@@ -41,6 +41,7 @@
       * Affiche l'en-tête des données.
            DISPLAY "ID   Région        Nom        Score".
            DISPLAY "-----------------------------------".
+           
       * Effectue une boucle de traitement pour chaque enregistrement.
            PERFORM VARYING I FROM 1 BY 1 UNTIL I > 10
                DISPLAY WS-ID OF WS-USER-RECORDS (I) 
@@ -54,11 +55,28 @@
            DISPLAY "-----------------------------------".
            DISPLAY " ".
 
-           DISPLAY "ID   Région        Nom        Score".
-           DISPLAY "-----------------------------------".
+           DISPLAY "ID  Région       Nom       Score".
+           DISPLAY "--------------------------------".
            DISPLAY WS-USER-RECORDS (2).
            DISPLAY WS-USER-RECORDS (5).
            DISPLAY WS-USER-RECORDS (10).
+           DISPLAY "-----------------------------------".
+           DISPLAY " ".
+
+           DISPLAY "ID   Région        Nom        Score".
+           DISPLAY "-----------------------------------".
+           DISPLAY WS-ID OF WS-USER-RECORDS (2) " " 
+      -            WS-REGION OF WS-USER-RECORDS (2) " "  
+      -            WS-NAME OF WS-USER-RECORDS (2) " "  
+      -            WS-SCORE OF WS-USER-RECORDS (2).
+           DISPLAY WS-ID OF WS-USER-RECORDS (5) " "  
+      -            WS-REGION OF WS-USER-RECORDS (5) " "  
+      -            WS-NAME OF WS-USER-RECORDS (5) " "  
+      -            WS-SCORE OF WS-USER-RECORDS (5).
+           DISPLAY WS-ID OF WS-USER-RECORDS (10) " "  
+      -            WS-REGION OF WS-USER-RECORDS (10) " "  
+      -            WS-NAME OF WS-USER-RECORDS (10) " "  
+      -            WS-SCORE OF WS-USER-RECORDS (10).
 
 
        1100-EXIT.
