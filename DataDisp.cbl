@@ -56,17 +56,10 @@
 
            DISPLAY "ID   Région        Nom        Score".
            DISPLAY "-----------------------------------".
-            PERFORM VARYING I FROM 1 BY 1 UNTIL I > 10
-              IF I = 2 OR I = 5 OR I = 10 THEN
-                DISPLAY WS-ID OF WS-USER-RECORDS (I) 
-                SPACE 
-                WS-REGION OF WS-USER-RECORDS (I) 
-                SPACE 
-                WS-NAME OF WS-USER-RECORDS (I) 
-                SPACE 
-                WS-SCORE OF WS-USER-RECORDS (I)
-              END-IF
-        END-PERFORM.
+           DISPLAY WS-USER-RECORDS (2).
+           DISPLAY WS-USER-RECORDS (5).
+           DISPLAY WS-USER-RECORDS (10).
+
 
        1100-EXIT.
            EXIT.
