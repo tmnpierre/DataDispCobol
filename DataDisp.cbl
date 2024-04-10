@@ -60,7 +60,7 @@
            DISPLAY WS-USER-RECORDS (2).
            DISPLAY WS-USER-RECORDS (5).
            DISPLAY WS-USER-RECORDS (10).
-           DISPLAY "-----------------------------------".
+           DISPLAY "--------------------------------".
            DISPLAY " ".
 
            DISPLAY "ID   Région        Nom        Score".
@@ -77,7 +77,6 @@
       -            WS-REGION OF WS-USER-RECORDS (10) " "  
       -            WS-NAME OF WS-USER-RECORDS (10) " "  
       -            WS-SCORE OF WS-USER-RECORDS (10).
-
 
        1100-EXIT.
            EXIT.
