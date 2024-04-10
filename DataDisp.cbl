@@ -39,8 +39,8 @@
        1100-PROCESS-DATA.
 
       * Affiche l'en-tête des données.
-           DISPLAY "ID   Région         Nom            Score".
-           DISPLAY "-----------------------------------------".
+           DISPLAY "ID   Région        Nom        Score".
+           DISPLAY "-----------------------------------".
       * Effectue une boucle de traitement pour chaque enregistrement.
            PERFORM VARYING I FROM 1 BY 1 UNTIL I > 10
                DISPLAY WS-ID OF WS-USER-RECORDS (I) 
@@ -51,6 +51,22 @@
                SPACE 
                WS-SCORE OF WS-USER-RECORDS (I)
            END-PERFORM.
-           
+           DISPLAY "-----------------------------------".
+           DISPLAY " ".
+
+           DISPLAY "ID   Région        Nom        Score".
+           DISPLAY "-----------------------------------".
+            PERFORM VARYING I FROM 1 BY 1 UNTIL I > 10
+              IF I = 2 OR I = 5 OR I = 10 THEN
+                DISPLAY WS-ID OF WS-USER-RECORDS (I) 
+                SPACE 
+                WS-REGION OF WS-USER-RECORDS (I) 
+                SPACE 
+                WS-NAME OF WS-USER-RECORDS (I) 
+                SPACE 
+                WS-SCORE OF WS-USER-RECORDS (I)
+              END-IF
+        END-PERFORM.
+
        1100-EXIT.
            EXIT.
